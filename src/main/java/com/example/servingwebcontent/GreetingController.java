@@ -9,16 +9,13 @@ import org.apache.log4j.Logger;
 
 @Controller
 public class GreetingController {
+	final static Logger logger = Logger.getLogger(GreetingController.class);
 
 	@GetMapping("/greeting")
 	public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
 		model.addAttribute("name", name);
-		static Logger log = Logger.getLogger(App.class.getName());
-		log.fatal("This is a fatal message for log4j");
-		log.error("This is an error message for log4j");
-		log.debug("This is an debug message for log4j");
-		log.warn("This is a warning message for log4j");
-		log.info("This is an info message for log4j");
+		
+		logger.info("This is an info message for log4j");
 		return "greeting";
 	}
 
