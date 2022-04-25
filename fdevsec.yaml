@@ -2,4 +2,16 @@ version: v1
 
 id:
   org: 64abf5b5-8f71-4a40-abc4-55d9da1f1147
-  app: 42eeadca-d821-430c-90db-9ab68bad7b09
+  app: d4b4088c-baef-4b0e-a0b2-7626980a952f
+
+scanners:
+  - sast
+  - dast
+  - secret
+  - sca  
+
+dast:
+  url: http://www.my-wordpress.link/
+  fortipentest_scanner: false #true|false
+  full_scan: true #true|false
+     
