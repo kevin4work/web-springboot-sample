@@ -12,6 +12,6 @@ scanners:
 
 dast:
   url: http://www.my-wordpress.link/
-  fortipentest_scanner: false #true|false
+  fortipentest_scanner: true #true|false
   full_scan: true #true|false
      
